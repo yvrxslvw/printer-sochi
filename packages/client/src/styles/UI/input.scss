@@ -1,0 +1,28 @@
+@import "variables";
+
+input {
+  outline: none;
+  border: 1px solid $light_grey_color;
+
+  padding: 18px;
+  background: $light_grey_color;
+  border-radius: 8px;
+  font-family: $nunito_font;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24.55px;
+  color: $black_color;
+  transition: border 400ms ease;
+
+  &::placeholder {
+    color: $dark_grey_color;
+  }
+
+  &:focus {
+    border-color: $light_blue_color;
+  }
+
+  &.error {
+    border-color: $accent_color;
+  }
+}
