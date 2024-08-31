@@ -1,0 +1,19 @@
+@import "variables";
+
+a {
+  text-decoration: none;
+  font-family: $nunito_font;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24.55px;
+  color: $light_blue_color;
+  transition: color 400ms ease;
+
+  &:hover {
+    color: $hover_light_blue_color;
+  }
+
+  &:active {
+    color: $click_light_blue_color;
+  }
+}
