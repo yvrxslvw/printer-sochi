@@ -1,0 +1,41 @@
+@import "variables";
+
+.switch-input {
+  position: relative;
+  display: inline-block;
+  width: 59px;
+  height: 33px;
+
+  input {
+    display: none;
+
+    &:checked + span::before {
+      background: $accent_color;
+      transform: translateX(26px);
+    }
+  }
+
+  span {
+    position: absolute;
+    cursor: pointer;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: $light_grey_color;
+    transition: 400ms ease;
+    border-radius: 25px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 23px;
+      height: 23px;
+      left: 5px;
+      bottom: 5px;
+      background: $dark_grey_color;
+      transition: 400ms ease;
+      border-radius: 50%;
+    }
+  }
+}
