@@ -1,0 +1,24 @@
+{
+	"name": "printer-sochi",
+	"description": "Printer Sochi fullstack website",
+	"author": {
+		"name": "yvrxslvw",
+		"email": "yvrxslvv@gmail.com",
+		"url": "https://github.com/yvrxslvw"
+	},
+	"repository": "https://github.com/yvrxslvw/printer-sochi",
+	"version": "1.0.0",
+	"private": true,
+	"license": "MIT",
+	"workspaces": [
+		"./packages/**"
+	],
+	"scripts": {
+		"client:dev": "yarn workspace client dev",
+		"client:build": "yarn workspace client build",
+		"server:dev": "yarn workspace server dev",
+		"server:build": "yarn workspace server build",
+		"server:prod": "yarn workspace server prod",
+		"server:lint": "yarn workspace server lint"
+	}
+}
