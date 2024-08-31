@@ -1,0 +1,58 @@
+@import "variables";
+
+.radio-input {
+  margin-bottom: 15px;
+
+  input[type="radio"] {
+    display: none;
+
+    &:checked + label::after {
+      background-color: $accent_color;
+    }
+  }
+
+  label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 40px;
+    margin-right: 0px;
+    user-select: none;
+    font-family: $nunito_font;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24.55px;
+    color: $black_color;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 33px;
+      height: 33px;
+      position: absolute;
+      left: 0px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: $light_grey_color;
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 23px;
+      height: 23px;
+      position: absolute;
+      left: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: $dark_grey_color;
+      border-radius: 50%;
+      transition: background 400ms ease;
+    }
+  }
+
+  &:last-child {
+    margin: 0px;
+  }
+}
