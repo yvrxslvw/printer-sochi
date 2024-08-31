@@ -1,0 +1,57 @@
+@import "variables";
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  background: $accent_color;
+  border-radius: 8px;
+  padding: 18px 32px;
+  color: $white_color;
+  font-family: $nunito_font;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24.55px;
+  text-align: center;
+  transition: background 400ms ease, color 400ms ease, border 400ms ease;
+
+  &:hover {
+    background: $hover_accent_color;
+  }
+
+  &:active {
+    background: $click_accent_color;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background: $dark_grey_color;
+    color: $white_color;
+  }
+
+  &.auxiliary {
+    background: initial;
+    border: 2px solid $black_color;
+    color: $black_color;
+    font-weight: 600;
+
+    &:hover {
+      background: $black_color;
+      color: $white_color;
+    }
+
+    &:active {
+      background: $click_black_color;
+      color: $white_color;
+      border-color: $click_black_color;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      background: $dark_grey_color;
+      color: $white_color;
+      border-color: $dark_grey_color;
+    }
+  }
+}
