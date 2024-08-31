@@ -1,0 +1,30 @@
+@import "variables";
+
+h2 {
+  font-family: $comfortaa_font;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 44.6px;
+}
+
+h3 {
+  font-family: $comfortaa_font;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 33.45px;
+  text-align: center;
+}
+
+h4 {
+  font-family: $nunito_font;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+p {
+  font-family: $nunito_font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
