@@ -2,10 +2,10 @@
 
 button {
   outline: none;
-  border: none;
   cursor: pointer;
 
   background: $accent_color;
+  border: 2px solid $accent_color;
   border-radius: 8px;
   padding: 18px 32px;
   color: $white_color;
@@ -18,21 +18,24 @@ button {
 
   &:hover {
     background: $hover_accent_color;
+    border-color: $hover_accent_color;
   }
 
   &:active {
     background: $click_accent_color;
+    border-color: $click_accent_color;
   }
 
   &:disabled {
     cursor: not-allowed;
     background: $dark_grey_color;
     color: $white_color;
+    border-color: $dark_grey_color;
   }
 
   &.auxiliary {
     background: initial;
-    border: 2px solid $black_color;
+    border-color: $black_color;
     color: $black_color;
     font-weight: 600;
 
