@@ -1,0 +1,11 @@
+<div class="logo" routerLink="/">
+  <img
+    [src]="dark ? '/logo_dark.png' : '/logo_light.png'"
+    alt="logo"
+    [draggable]="false"
+  />
+  <section [ngClass]="{ dark }">
+    <h1>Printer<span>Sochi</span></h1>
+    <p>Сервис печати фотографий</p>
+  </section>
+</div>
