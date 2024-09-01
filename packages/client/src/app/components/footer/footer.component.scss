@@ -1,0 +1,44 @@
+@import "variables";
+@import "mixins";
+
+footer {
+  background: $black_color;
+  padding: 45px 0px;
+
+  .container {
+    @include container;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .info-column {
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+
+      section {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        span {
+          display: flex;
+          gap: 10px;
+          color: $white_color;
+
+          p {
+            font-family: $nunito_font;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16.37px;
+          }
+
+          &:first-child p {
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}
