@@ -1,0 +1,90 @@
+@import "variables";
+@import "mixins";
+
+.slider {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+
+  .back-button,
+  .next-button {
+    position: absolute;
+    top: 0px;
+    z-index: 2;
+    height: 100%;
+    font-size: 35px;
+    padding: 0px 20px;
+    background: initial;
+    border: none;
+    border-radius: 0px;
+
+    &:hover {
+      background: rgba($color: $white_color, $alpha: 0.2);
+    }
+  }
+
+  .next-button {
+    right: 0px;
+  }
+
+  .images-row {
+    .image-content {
+      position: absolute;
+      top: 50%;
+      transition: transform 0.4s ease;
+
+      img {
+        width: 100vw;
+        filter: brightness(50%);
+      }
+
+      section {
+        @include container;
+
+        color: $white_color;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        h2 {
+          margin-bottom: 10px;
+        }
+
+        h4 {
+          margin-bottom: 35px;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 27.28px;
+        }
+      }
+    }
+  }
+
+  .pagination {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    left: 50%;
+    bottom: 15px;
+    transform: translateX(-50%);
+    height: 7px;
+
+    .item {
+      border: none;
+      outline: none;
+      background: $white_color;
+
+      width: 50px;
+      height: 3px;
+      border-radius: 5px;
+      padding: 0px;
+      transition: height 0.4s ease;
+
+      &.active {
+        height: 7px;
+      }
+    }
+  }
+}

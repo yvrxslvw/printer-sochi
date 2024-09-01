@@ -1,0 +1,38 @@
+<div class="slider">
+  <button class="back-button" (click)="prevImage()">
+    <fa-icon [icon]="faChevronLeft"></fa-icon>
+  </button>
+
+  <div class="images-row">
+    @for (imageSrc of imageSrcs; track $index) {
+    <div
+      class="image-content"
+      [style.transform]="
+        'translate(' + ($index * 100 - currentImage * 100) + '%, -50%)'
+      "
+    >
+      <img [src]="imageSrc" [alt]="'slider_' + ($index + 1)" />
+      <!-- To change section -->
+      <section>
+        <h2>Сервис печати фотографий</h2>
+        <h4>Делитесь яркими моментами с близкими.</h4>
+        <button>Связаться</button>
+      </section>
+    </div>
+    }
+  </div>
+
+  <button class="next-button" (click)="nextImage()">
+    <fa-icon [icon]="faChevronRight"></fa-icon>
+  </button>
+
+  <div class="pagination">
+    @for (page of imageSrcs; track $index) {
+    <button
+      class="item"
+      [ngClass]="{ active: $index === currentImage }"
+      (click)="currentImage = $index"
+    ></button>
+    }
+  </div>
+</div>
