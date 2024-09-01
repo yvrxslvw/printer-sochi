@@ -71,5 +71,44 @@ footer {
         }
       }
     }
+
+    .contacts-column {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 37px;
+
+      section {
+        text-align: right;
+
+        h3 {
+          font-family: $nunito_font;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 26.4px;
+          color: $white_color;
+          margin-bottom: 6px;
+        }
+
+        a {
+          font-family: $nunito_font;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 15.4px;
+          color: $white_color;
+          border-bottom: 1px dashed $white_color;
+        }
+      }
+
+      nav {
+        display: flex;
+        gap: 13px;
+
+        a {
+          color: $white_color;
+          font-size: 17px;
+        }
+      }
+    }
   }
 }
