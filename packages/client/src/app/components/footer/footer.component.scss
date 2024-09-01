@@ -40,5 +40,36 @@ footer {
         }
       }
     }
+
+    .nav-column {
+      display: flex;
+      gap: 110px;
+
+      section {
+        p {
+          margin-bottom: 20px;
+          font-family: $nunito_font;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 21.82px;
+          color: $white_color;
+        }
+
+        nav {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          a {
+            font-family: $nunito_font;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 15.4px;
+            color: $dark_grey_color;
+            max-width: 165px;
+          }
+        }
+      }
+    }
   }
 }
