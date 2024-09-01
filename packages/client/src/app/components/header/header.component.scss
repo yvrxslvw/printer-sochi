@@ -1,0 +1,121 @@
+@import "mixins";
+@import "variables";
+
+header {
+  padding: 15px 0px;
+
+  .container {
+    @include container;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      user-select: none;
+      cursor: pointer;
+
+      img {
+        width: 50px;
+        height: 50px;
+      }
+
+      section {
+        h1 {
+          font-family: $comfortaa_font;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 23.4px;
+          letter-spacing: 1%;
+
+          span {
+            color: $accent_color;
+          }
+        }
+
+        p {
+          font-family: $nunito_font;
+          font-weight: 600;
+          font-size: 9px;
+          line-height: 11.7px;
+        }
+      }
+    }
+
+    nav {
+      display: flex;
+      gap: 64px;
+      position: relative;
+
+      a {
+        color: $black_color;
+        font-size: 14px;
+
+        &:hover {
+          color: $accent_color;
+        }
+      }
+
+      .dropdown-button {
+        border: none;
+        outline: none;
+        background: initial;
+        padding: 0px;
+
+        color: $black_color;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18.2px;
+
+        .icon {
+          color: $accent_color;
+        }
+
+        &:hover {
+          color: $accent_color;
+        }
+      }
+
+      .dropdown {
+        position: absolute;
+        top: 150%;
+        right: 0px;
+        background: $white_color;
+        border-radius: 10px;
+        filter: drop-shadow(0px 5px 24px rgba($color: #1b0000, $alpha: 0.2));
+
+        li {
+          list-style-type: none;
+
+          button {
+            background: none;
+            border: none;
+            border-radius: 0px;
+            outline: none;
+
+            color: $black_color;
+            width: 100%;
+            text-align: right;
+            padding: 10px 25px;
+            border-bottom: 1px solid $light_grey_color;
+            line-height: 18.2px;
+            font-family: $nunito_font;
+            font-weight: 400;
+            font-size: 14px;
+
+            &:hover {
+              color: $accent_color;
+            }
+          }
+
+          &:last-child {
+            border: none;
+          }
+        }
+      }
+    }
+  }
+}

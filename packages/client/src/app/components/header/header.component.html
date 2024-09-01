@@ -1,0 +1,44 @@
+<header>
+  <div class="container">
+    <div class="logo" routerLink="/">
+      <img src="/logo.png" alt="logo" />
+      <section>
+        <h1>Printer<span>Sochi</span></h1>
+        <p>Сервис печати фотографий</p>
+      </section>
+    </div>
+    <nav>
+      <a href="#">Наши услуги</a>
+      <a href="#">Цены</a>
+      <a href="#">Отзывы</a>
+      <a href="#">Контакты</a>
+      <button
+        class="dropdown-button"
+        (click)="isDropdownShown = !isDropdownShown; $event.stopPropagation()"
+      >
+        Ещё <fa-icon class="icon" [icon]="faChevronDown"></fa-icon>
+      </button>
+
+      <ul
+        class="dropdown"
+        *ngIf="isDropdownShown"
+        (click)="$event.stopPropagation()"
+      >
+        <li>
+          <button>Нестандартные размеры печати</button>
+        </li>
+        <li>
+          <button>Доставка</button>
+        </li>
+        <li>
+          <button>
+            <fa-icon [icon]="faDiceFive"></fa-icon> Взрывные котята
+          </button>
+        </li>
+        <li>
+          <button>Фотограф</button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
