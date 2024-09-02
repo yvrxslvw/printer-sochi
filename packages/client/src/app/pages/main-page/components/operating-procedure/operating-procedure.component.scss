@@ -1,0 +1,99 @@
+@import "mixins";
+@import "variables";
+
+.operating-procedure {
+  margin-top: 90px;
+
+  .container {
+    @include container;
+
+    display: flex;
+    justify-content: space-between;
+
+    & > .content {
+      padding: 30px 0px;
+      flex-basis: 35%;
+
+      h3 {
+        font-family: $comfortaa_font;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 33.45px;
+        color: $black_color;
+        margin-bottom: 12px;
+        text-align: left;
+      }
+
+      p {
+        font-family: $nunito_font;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $dark_grey_color;
+        margin-bottom: 30px;
+      }
+
+      .arrow {
+        background: initial;
+        width: 68px;
+        height: 68px;
+        border: 2px solid $black_color;
+        border-radius: 50%;
+        color: $black_color;
+        position: relative;
+
+        .icon {
+          font-size: 30px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+
+    .procedures {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      .procedures__item {
+        background: $light_grey_color;
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+
+        .icon {
+          padding: 30px;
+          background: $black_color;
+          border-radius: 10px;
+        }
+
+        &:first-child .icon {
+          background: $accent_color;
+        }
+
+        & > .content {
+          padding: 34px 40px;
+
+          h4 {
+            font-family: $nunito_font;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 27.28px;
+            color: $black_color;
+            margin-bottom: 3px;
+          }
+
+          p {
+            font-family: $nunito_font;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 21.82px;
+            color: $dark_grey_color;
+          }
+        }
+      }
+    }
+  }
+}
