@@ -1,0 +1,111 @@
+@import "mixins";
+@import "variables";
+
+.photo-report {
+  margin-top: 90px;
+  margin-bottom: 50px;
+  position: relative;
+
+  .background {
+    width: 42%;
+    height: 462px;
+    background: $black_color;
+    border-radius: 0px 10px 10px 0px;
+  }
+
+  .container {
+    @include container;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .images {
+      height: 264px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 83px;
+
+      .images__row {
+        position: relative;
+
+        img {
+          position: absolute;
+          top: 50%;
+          transition: transform 0.4s ease;
+        }
+      }
+
+      .content {
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        h3 {
+          text-align: right;
+          font-family: $comfortaa_font;
+          font-weight: 700;
+          font-size: 30px;
+          line-height: 33.45px;
+          color: $black_color;
+          margin-bottom: 12px;
+        }
+
+        p {
+          font-family: $nunito_font;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          text-align: right;
+          color: $dark_grey_color;
+          margin-bottom: 35px;
+        }
+
+        button {
+          align-self: flex-end;
+          padding: 14px 28px;
+        }
+      }
+    }
+
+    .navigation {
+      display: flex;
+
+      p {
+        font-family: $nunito_font;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19.1px;
+        color: $white_color;
+        margin-right: 200px;
+
+        span {
+          font-weight: 600;
+          font-size: 32px;
+          line-height: 43.65px;
+        }
+      }
+
+      .buttons {
+        display: flex;
+        gap: 20px;
+
+        button {
+          width: 58px;
+          height: 58px;
+          background: initial;
+          border: 2px solid $white_color;
+          border-radius: 50%;
+          padding: 0px;
+          font-size: 24px;
+
+          &:hover {
+            background: $dark_grey_color;
+          }
+        }
+      }
+    }
+  }
+}

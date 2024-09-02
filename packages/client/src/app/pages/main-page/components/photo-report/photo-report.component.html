@@ -1,0 +1,49 @@
+<div class="photo-report">
+  <div class="background"></div>
+  <div class="container">
+    <section class="images">
+      <div class="images__row">
+        <img
+          src="/photo-report_01.png"
+          alt="photo-report"
+          [style.transform]="
+            'translate(' + (0 - currentImage * 100) + '%, -50%)'
+          "
+        />
+        <img
+          src="/photo-report_02.png"
+          alt="photo-report"
+          [style.transform]="
+            'translate(calc(' + (100 - currentImage * 100) + '% + 30px), -50%)'
+          "
+        />
+        <img
+          src="/photo-report_03.png"
+          alt="photo-report"
+          [style.transform]="
+            'translate(calc(' + (200 - currentImage * 100) + '% + 60px), -50%)'
+          "
+        />
+      </div>
+      <div class="content">
+        <h3>Фотоотчёт</h3>
+        <p>Выкладываем фотоотчёты о проделанной нами работе</p>
+        <button class="auxiliary">Показать все</button>
+      </div>
+    </section>
+    <section class="navigation">
+      <p>
+        <span>{{ currentImage + 1 | number : "2.0" }}</span>
+        /03
+      </p>
+      <div class="buttons">
+        <button (click)="prevImage()">
+          <fa-icon [icon]="faArrowLeft"></fa-icon>
+        </button>
+        <button (click)="nextImage()">
+          <fa-icon [icon]="faArrowRight"></fa-icon>
+        </button>
+      </div>
+    </section>
+  </div>
+</div>
