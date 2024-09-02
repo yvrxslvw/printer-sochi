@@ -16,10 +16,7 @@
       grid-template-columns: repeat(6, 1fr);
       grid-gap: 30px;
 
-      p {
-        border: 1px solid $accent_color;
-        height: 388px;
-
+      .service {
         &:nth-child(-1n + 2) {
           grid-column: span 3;
         }

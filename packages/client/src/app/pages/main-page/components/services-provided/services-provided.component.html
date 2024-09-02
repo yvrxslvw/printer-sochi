@@ -2,11 +2,36 @@
   <div class="container">
     <h3>Предоставляемые услуги</h3>
     <div class="services">
-      <p>1</p>
-      <p>2</p>
-      <p>3</p>
-      <p>4</p>
-      <p>5</p>
+      <app-provided-service
+        class="service"
+        imageSrc="/service_01.png"
+        title="Квадратные фотографии"
+        [sizes]="['10x10 см', '10x13 см', '15x15 см']"
+      />
+      <app-provided-service
+        class="service"
+        imageSrc="/service_02.png"
+        title="Фотографии Polaroid"
+        [sizes]="['13x13 см', '13x13 см', '13x13 см']"
+      />
+      <app-provided-service
+        class="service"
+        imageSrc="/service_03.png"
+        title="Фотокарточки"
+        [sizes]="['14.5x14.5 см', '14.5x14.5 см', '14.5x14.5 см']"
+      />
+      <app-provided-service
+        class="service"
+        imageSrc="/service_04.png"
+        title="Большой формат"
+        [sizes]="['10x10 см', '10x13 см', '15x15 см']"
+      />
+      <app-provided-service
+        class="service"
+        imageSrc="/service_05.png"
+        title="Услуга"
+        [sizes]="['10x10 см', '10x13 см', '15x15 см']"
+      />
     </div>
   </div>
 </div>

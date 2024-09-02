@@ -1,0 +1,19 @@
+<div class="provided-service">
+  <section class="image-section">
+    <img [src]="imageSrc" alt="service" />
+  </section>
+  <section class="content-section">
+    <h4>{{ title }}</h4>
+    <section class="content">
+      <ul>
+        @for (size of sizes; track $index) {
+        <li>{{ size }}</li>
+        }
+      </ul>
+      <section class="buttons">
+        <button class="price__button">Цена</button>
+        <button class="order__button">Заказать</button>
+      </section>
+    </section>
+  </section>
+</div>

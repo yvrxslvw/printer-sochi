@@ -1,0 +1,66 @@
+@import "variables";
+
+.provided-service {
+  background: $light_grey_color;
+  border-radius: 10px;
+  overflow: hidden;
+
+  .image-section img {
+    border-radius: 10px;
+    width: 100%;
+  }
+
+  .content-section {
+    padding: 25px;
+
+    h4 {
+      font-family: $nunito_font;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 26px;
+      color: $black_color;
+      margin-bottom: 10px;
+    }
+
+    .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      ul li {
+        list-style-type: none;
+        font-family: $nunito_font;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15.6px;
+        color: $dark_grey_color;
+        margin-bottom: 2px;
+
+        &:last-child {
+          margin-bottom: none;
+        }
+      }
+
+      .buttons {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        gap: 10px;
+
+        button {
+          padding: 10px 20px;
+          font-size: 16px;
+          border: none;
+
+          &.price__button {
+            background: $blue_color;
+          }
+
+          &.order__button {
+            background: $green_color;
+          }
+        }
+      }
+    }
+  }
+}
