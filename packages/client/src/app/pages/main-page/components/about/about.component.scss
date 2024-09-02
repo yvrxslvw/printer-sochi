@@ -1,0 +1,42 @@
+@import "mixins";
+@import "variables";
+
+.about {
+  margin-top: 90px;
+
+  .container {
+    @include container;
+
+    display: flex;
+    gap: 200px;
+
+    h3 {
+      text-align: left;
+      width: max-content;
+    }
+
+    .content {
+      width: 400px;
+
+      h4 {
+        margin-bottom: 15px;
+        font-family: $nunito_font;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 22px;
+
+        span {
+          color: $accent_color;
+        }
+      }
+
+      p {
+        font-family: $nunito_font;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        color: $dark_grey_color;
+      }
+    }
+  }
+}
