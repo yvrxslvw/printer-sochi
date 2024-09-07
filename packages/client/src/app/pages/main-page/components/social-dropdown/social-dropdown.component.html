@@ -1,0 +1,38 @@
+<div class="social-dropdown">
+  <div class="container">
+    <button class="dropdown" (click)="isShown = !isShown">
+      <fa-icon
+        [icon]="faChevronUp"
+        class="icon"
+        [style.transform]="isShown ? 'rotate(0deg)' : 'rotate(180deg)'"
+      ></fa-icon>
+    </button>
+
+    <div class="social-list">
+      <button
+        class="item whatsapp"
+        [style.transform]="isShown ? 'translateY(0%)' : 'translateY(500%)'"
+      >
+        <fa-icon [icon]="faWhatsapp"></fa-icon>
+      </button>
+      <button
+        class="item instagram"
+        [style.transform]="isShown ? 'translateY(0%)' : 'translateY(500%)'"
+      >
+        <fa-icon [icon]="faInstagram"></fa-icon>
+      </button>
+      <button
+        class="item telegram"
+        [style.transform]="isShown ? 'translateY(0%)' : 'translateY(500%)'"
+      >
+        <fa-icon [icon]="faTelegram"></fa-icon>
+      </button>
+      <button
+        class="item vk"
+        [style.transform]="isShown ? 'translateY(0%)' : 'translateY(500%)'"
+      >
+        <fa-icon [icon]="faVk"></fa-icon>
+      </button>
+    </div>
+  </div>
+</div>
